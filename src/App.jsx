@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Leaf,
-  Menu,
-  X,
+import { 
+  Leaf, 
+  Activity, 
+  Heart, 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Menu, 
+  X, 
   Wind,
   Bird
 } from 'lucide-react';
@@ -71,6 +76,14 @@ const App = () => {
             <NavLink href="#about">About</NavLink>
             <NavLink href="#services">Services</NavLink>
             <NavLink href="#approach">Approach</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
+            <a 
+              href="#contact" 
+              className="px-6 py-2 rounded-full text-white font-medium transition-all hover:shadow-lg hover:-translate-y-0.5"
+              style={{ backgroundColor: colors.terracotta }}
+            >
+              Book Visit
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,6 +102,7 @@ const App = () => {
               <NavLink href="#about" mobile>About</NavLink>
               <NavLink href="#services" mobile>Services</NavLink>
               <NavLink href="#approach" mobile>Approach</NavLink>
+              <NavLink href="#contact" mobile>Contact</NavLink>
             </div>
           </div>
         )}
@@ -123,6 +137,15 @@ const App = () => {
             <span className="font-semibold text-[#7d9c6c]">Beit Zippora</span> is preparing a new space for your journey to Restore, Move, and Nourish.
           </p>
           
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a 
+              href="#contact" 
+              className="px-8 py-4 rounded-full text-white font-medium text-center transition-all hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2"
+              style={{ backgroundColor: colors.terracotta }}
+            >
+              Stay Updated
+            </a>
+          </div>
         </div>
       </header>
 
@@ -173,9 +196,14 @@ const App = () => {
       {/* Services Section */}
       <section id="services" className="py-24 px-6 relative" style={{ backgroundColor: '#f4f1ea' }}>
         <div className="container mx-auto max-w-6xl">
-          <div className="mb-16">
-            <span className="text-[#c57d56] font-bold tracking-widest text-sm uppercase mb-2 block">Our Offerings</span>
-            <h2 className="font-serif text-4xl text-gray-800">Clinical & Wellness Services</h2>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div>
+              <span className="text-[#c57d56] font-bold tracking-widest text-sm uppercase mb-2 block">Our Offerings</span>
+              <h2 className="font-serif text-4xl text-gray-800">Clinical & Wellness Services</h2>
+            </div>
+            <a href="#contact" className="text-[#7d9c6c] font-medium hover:text-[#c57d56] flex items-center gap-2">
+              View full price list <Activity size={16} />
+            </a>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -234,6 +262,85 @@ const App = () => {
                   <span>RIVKA C, HEAD PHYSIOTHERAPIST</span>
                </div>
              </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 px-6 text-white relative" style={{ backgroundColor: colors.terracotta }}>
+        <div className="container mx-auto max-w-5xl relative z-10">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-5 text-gray-800">
+            
+            {/* Contact Info */}
+            <div className="md:col-span-2 p-10 bg-[#3d3d3d] text-white flex flex-col justify-between relative overflow-hidden">
+              <div className="relative z-10">
+                <h3 className="font-serif text-2xl mb-2">Visit Us</h3>
+                <p className="text-white/70 text-sm mb-12">We'd love to hear from you.</p>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <MapPin className="text-[#c57d56] shrink-0" />
+                    <div>
+                      <p className="font-bold text-sm">Our Location</p>
+                      <p className="text-white/70 text-sm">123 HaShalom Road,<br/>Tel Aviv, Israel</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Phone className="text-[#c57d56] shrink-0" />
+                    <div>
+                      <p className="font-bold text-sm">Phone</p>
+                      <p className="text-white/70 text-sm">+972 50-123-4567</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Mail className="text-[#c57d56] shrink-0" />
+                    <div>
+                      <p className="font-bold text-sm">Email</p>
+                      <p className="text-white/70 text-sm">hello@beitzippora.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Circle */}
+              <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-[#4a4a4a] rounded-full"></div>
+            </div>
+
+            {/* Form */}
+            <div className="md:col-span-3 p-10 lg:p-14">
+              <h3 className="font-serif text-3xl mb-8 text-[#c57d56]">Book an Appointment</h3>
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">First Name</label>
+                    <input type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#c57d56] transition-colors bg-transparent" placeholder="Jane" />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Last Name</label>
+                    <input type="text" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#c57d56] transition-colors bg-transparent" placeholder="Doe" />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Phone</label>
+                  <input type="tel" className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#c57d56] transition-colors bg-transparent" placeholder="050-000-0000" />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Service Interest</label>
+                  <select className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-[#c57d56] transition-colors bg-transparent text-gray-700">
+                    <option>General Consultation</option>
+                    <option>Pelvic Floor Therapy</option>
+                    <option>Pilates</option>
+                    <option>Postpartum Check</option>
+                  </select>
+                </div>
+
+                <button className="w-full py-4 rounded-lg text-white font-bold mt-4 hover:opacity-90 transition-opacity shadow-lg" style={{ backgroundColor: colors.sage }}>
+                  Send Request
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
