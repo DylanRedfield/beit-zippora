@@ -239,15 +239,16 @@ const App = () => {
                 <div className="relative aspect-square bg-[#7d9c6c] rounded-3xl overflow-hidden flex items-center justify-center">
                    {/* Placeholder for Founder Image */}
                    <span className="text-white/80 font-serif text-2xl text-center px-8">
-                     [Insert Photo of Zippora or Clinic Space]
+                     [Insert Photo of Rivka or Clinic Space]
                    </span>
                 </div>
              </div>
              <div className="order-1 md:order-2">
                <h2 className="font-serif text-4xl text-gray-800 mb-6">A space built for women.</h2>
                <p className="text-gray-600 mb-6 leading-relaxed">
-                 Founded with the vision of creating a safe, nurturing environment for women's health in Israel, 
-                 Beit Zippora combines evidence-based physiotherapy with a holistic view of the female body.
+                 Named in memory of the late Zippora, Beit Zippora was founded by her daughter Rivka
+                 with the vision of creating a safe, nurturing environment for women's health in Israel.
+                 We combine evidence-based physiotherapy with a holistic view of the female body.
                </p>
                <p className="text-gray-600 mb-8 leading-relaxed">
                  Whether you are recovering from childbirth, managing chronic pain, or seeking to strengthen 
@@ -257,7 +258,7 @@ const App = () => {
                
                <div className="flex items-center gap-4 text-sm font-bold text-[#c57d56]">
                   <div className="h-px w-12 bg-[#c57d56]"></div>
-                  <span>ZIPPORA, HEAD PHYSIOTHERAPIST</span>
+                  <span>RIVKA C, HEAD PHYSIOTHERAPIST</span>
                </div>
              </div>
           </div>
