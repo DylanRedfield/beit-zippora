@@ -236,11 +236,12 @@ const App = () => {
              <div className="order-2 md:order-1 relative">
                 {/* Decorative squares */}
                 <div className="absolute top-0 right-0 w-2/3 h-full bg-[#fcf8f2] rounded-3xl -z-10 translate-x-8 -translate-y-8"></div>
-                <div className="relative aspect-square bg-[#7d9c6c] rounded-3xl overflow-hidden flex items-center justify-center">
-                   {/* Placeholder for Founder Image */}
-                   <span className="text-white/80 font-serif text-2xl text-center px-8">
-                     [Insert Photo of Rivka or Clinic Space]
-                   </span>
+                <div className="relative aspect-square rounded-3xl overflow-hidden">
+                   <img
+                     src="https://images.unsplash.com/photo-1579126038374-6064e9370f0f?auto=format&fit=crop&q=80&w=1000"
+                     alt="Clinic space"
+                     className="w-full h-full object-cover"
+                   />
                 </div>
              </div>
              <div className="order-1 md:order-2">
